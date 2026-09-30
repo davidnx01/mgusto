@@ -47,11 +47,10 @@ nav a:hover{background-size:100% 1px}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center;max-width:1240px;margin:0 auto;padding:10px calc(var(--gut) + 14px) 46px}
 .doily-box{container-type:inline-size;position:relative;width:min(100%,490px);aspect-ratio:1;justify-self:center}
 .doily-box svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.doily-box .name{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--tray);text-align:center}
-h1{font:400 clamp(30px,9.6cqw,48px)/1 var(--head);letter-spacing:.005em}
-.doily-box .name .lbl{font-size:clamp(9px,2.3cqw,11.5px);margin-top:.9em;color:var(--ink)}
+.doily-box .ph{position:absolute;left:22.5%;top:22.5%;width:55%;height:55%;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--paper),0 0 0 4px rgba(43,21,28,.2)}
+h1{font:400 clamp(58px,7.4vw,96px)/.95 var(--head);letter-spacing:.005em;margin-top:10px}
 .hero .txt .lbl{color:var(--mango)}
-blockquote{font:400 clamp(26px,3.3vw,40px)/1.2 var(--head);margin:16px 0 14px;text-wrap:balance}
+blockquote{font:400 clamp(21px,2.3vw,29px)/1.25 var(--head);margin:22px 0 12px;text-wrap:balance;max-width:26em}
 .src{font-size:13px;color:rgba(255,255,255,.72)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
 
@@ -88,10 +87,24 @@ h2{font:400 clamp(32px,4.4vw,54px)/1.08 var(--head);margin-top:12px;text-wrap:ba
 .vnote{margin-top:26px;font-size:14px;color:rgba(255,255,255,.72);display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;justify-content:space-between}
 .vnote p{max-width:68ch}
 
+/* galeria */
+.gal{padding:76px 0 70px;background:#f3dedb}
+.gal .lbl{color:var(--tray)}
+.gal h2{color:var(--ink);margin-bottom:10px}
+.gal .sub{max-width:58ch;color:var(--mute);font-size:16px}
+.dps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,44px);margin-top:34px}
+.dp{margin:0;text-align:center}
+.dpbox{position:relative;aspect-ratio:1;width:100%;max-width:380px;margin:0 auto;overflow:hidden;border-radius:50%}
+.dpbox svg{position:absolute;inset:-2%;width:104%;height:104%;max-width:none;filter:drop-shadow(0 6px 10px rgba(43,21,28,.22))}
+.dpbox{overflow:visible}
+.dpbox img{position:absolute;left:21%;top:21%;width:58%;height:58%;box-shadow:0 0 0 3px var(--paper);border-radius:50%;object-fit:cover;transition:transform .5s}
+.dpbox:hover img{transform:scale(1.045)}
+.dp figcaption{margin-top:14px;font-size:16px;line-height:1.4;max-width:24ch;margin-left:auto;margin-right:auto}
 /* namesti */
 .sec{padding:76px 0}
 .two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,6vw,90px);align-items:center}
-.cup{max-width:400px;justify-self:center;width:100%;padding:26px;border-radius:14px;background:radial-gradient(110% 100% at 25% 45%,#8a2549 0,var(--tray) 55%,var(--tray-d) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.cup{max-width:420px;justify-self:center;width:100%;padding:16px;border-radius:14px;background:radial-gradient(110% 100% at 25% 45%,#8a2549 0,var(--tray) 55%,var(--tray-d) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.cup img{width:100%;border-radius:6px}
 .sec .lbl{color:var(--tray)}
 .sec h2{color:var(--ink)}
 .sec p.lead{margin-top:18px;font-size:18px;max-width:54ch}
@@ -123,7 +136,8 @@ dd a{font-weight:600}
 .linkbtns .btn.o:hover{background:var(--tray);color:#fff}
 
 footer{background:var(--tray-d);color:rgba(255,255,255,.82);padding:30px 0 34px;font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-between}
+footer .fl{display:flex;align-items:center;gap:14px}footer .fl img{border-radius:50%}
+footer .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:8px 30px;justify-content:space-between}
 .bar{display:none}
 
 @media (max-width:1020px){
@@ -157,7 +171,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
   .band{padding:52px 0 60px}
   .stat b{font-size:32px}
   .stat{padding:20px 12px 18px}
-  .cup{max-width:300px;padding:18px}
+  .cup{max-width:340px;padding:12px}
+  .dps{grid-template-columns:1fr;gap:34px}
+  .gal{padding:54px 0 50px}
+  h1{font-size:clamp(56px,17vw,72px)}
   .tray .btn{display:none}
   .cta{display:none}
   dl div{grid-template-columns:1fr;gap:2px}
@@ -176,9 +193,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
       <circle r="83" stroke-width="4.4" stroke-dasharray="0 17.38" transform="rotate(6)"/>
       <circle r="71" stroke-width="3.2" stroke-dasharray="0 14.87" transform="rotate(12)"/>
       <circle r="60" stroke-width="6" stroke-dasharray="0 18.85" />
-      <circle r="43" stroke-width="2.6" stroke-dasharray="0 16.89" transform="rotate(11)"/>
+      <circle r="43" stroke-width="2.6" stroke-dasharray="0 16.89" transform="rotate(11)" style="display:var(--in,inline)"/>
     </g>
-    <g fill="none" stroke="var(--emb)" stroke-width=".8"><circle r="51"/><circle r="49.4"/><circle r="36.5"/></g>
+    <g fill="none" stroke="var(--emb)" stroke-width=".8"><circle r="51"/><circle r="49.4"/><circle r="36.5" style="display:var(--in,inline)"/></g>
   </symbol>
 </defs></svg>
 
@@ -187,7 +204,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
 <div class="tray">
 <header>
   <a class="logo" href="#">Mgusto</a>
-  <nav aria-label="Hlavné menu"><a href="#vitrina">Vitrína</a><a href="#namesti">Na námestí</a><a href="#hodiny">Hodiny</a><a href="#kontakt">Kontakt</a></nav>
+  <nav aria-label="Hlavné menu"><a href="#vitrina">Vitrína</a><a href="#galeria">Fotky</a><a href="#namesti">Na námestí</a><a href="#hodiny">Hodiny</a><a href="#kontakt">Kontakt</a></nav>
   <a class="tel" href="tel:+421948693527">+421 948 693 527</a>
   <a class="btn" href="https://food.bolt.eu/sk-sk/525-trencin/p/121154-mgusto-cukraren/" rel="noopener" target="_blank">Objednať cez Bolt Food</a>
 </header>
@@ -195,12 +212,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
   <div class="doily-box">
     <svg viewBox="-100 -100 200 200" aria-hidden="true">
       <ellipse cx="3" cy="6" rx="96" ry="96" fill="#000" opacity=".22" style="filter:blur(5px)"/>
-      <use href="#doily" x="-100" y="-100" width="200" height="200" style="--hole:var(--tray-d)"/>
+      <use href="#doily" x="-100" y="-100" width="200" height="200" style="--hole:var(--tray-d);--in:none"/>
     </svg>
-    <div class="name"><h1>Mgusto</h1><span class="lbl">Cukráreň · Trenčín</span></div>
+    <img class="ph" src="assets/mgusto-kosik-hero.webp" width="560" height="560" alt="Čokoládový košíčkový zákusok s čučoriedkami na bielom tanieri" fetchpriority="high">
   </div>
   <div class="txt">
-    <span class="lbl">Cukráreň a kaviareň · Mierové námestie 28</span>
+    <span class="lbl">Cukráreň a kaviareň · Trenčín</span>
+    <h1>Mgusto</h1>
     <blockquote>„Zákusky taliansko - francúzskej výroby, ktoré pečieme priamo v našej prevádzke.“</blockquote>
     <p class="src">Ich vlastný text z Facebooku</p>
     <div class="cta">
@@ -254,7 +272,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
       </article>
     </div>
     <div class="vnote">
-      <p>Ceny podľa ponuky na Bolt Food (30. 9. 2026) — sú rozvozové a v prevádzke sa môžu líšiť. Bolt zobrazuje len kategóriu Dezerty (4 položky), celý sortiment nie je uvedený. Ilustrácie sú schematické, nie presná podoba zákuskov.</p>
+      <p>Ceny podľa ponuky na Bolt Food (30. 9. 2026) — sú rozvozové a v prevádzke sa môžu líšiť. Bolt zobrazuje len kategóriu Dezerty (4 položky), celý sortiment nie je uvedený. Ilustrácie sú schematické, nie presná podoba zákuskov — fotky z ich Facebooku sú nižšie.</p>
       <a class="btn" href="https://food.bolt.eu/sk-sk/525-trencin/p/121154-mgusto-cukraren/" rel="noopener" target="_blank">Celá ponuka na Bolt Food</a>
     </div>
   </div>
@@ -262,19 +280,23 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
 
 <div class="lace sm" aria-hidden="true" style="--hole:var(--bg)"></div>
 
-<section class="sec" id="namesti">
+<section class="gal" id="galeria">
+  <div class="wrap">
+    <span class="lbl">Z ich pultu a stola</span>
+    <h2>Pečené priamo v prevádzke</h2>
+    <p class="sub">Fotografie z ich Facebooku. Nemusia zobrazovať presne tie položky, ktoré sú na Bolt Food.</p>
+    <div class="dps">
+      <figure class="dp"><div class="dpbox"><svg viewBox="-100 -100 200 200" aria-hidden="true"><use href="#doily" x="-100" y="-100" width="200" height="200" style="--hole:#f3dedb;--in:none"/></svg><img src="assets/mgusto-croissant.webp" width="520" height="520" loading="lazy" alt="Croissant s vanilkovým krémom a malinou vo vitríne"></div><figcaption>Croissant s krémom a malinou</figcaption></figure>
+      <figure class="dp"><div class="dpbox"><svg viewBox="-100 -100 200 200" aria-hidden="true"><use href="#doily" x="-100" y="-100" width="200" height="200" style="--hole:#f3dedb;--in:none"/></svg><img src="assets/mgusto-listkove-pecivo.webp" width="520" height="520" loading="lazy" alt="Lístkové pečivo s krémom, malinou, jahodou a čučoriedkami, posypané práškovým cukrom"></div><figcaption>Lístkové pečivo s krémom a čerstvým ovocím</figcaption></figure>
+      <figure class="dp"><div class="dpbox"><svg viewBox="-100 -100 200 200" aria-hidden="true"><use href="#doily" x="-100" y="-100" width="200" height="200" style="--hole:#f3dedb;--in:none"/></svg><img src="assets/mgusto-kosiky-zhora.webp" width="520" height="520" loading="lazy" alt="Dva čokoládové zákusky v tvare košíka s čučoriedkami a mätou, pohľad zhora"></div><figcaption>Košíčkové zákusky s čučoriedkami a mätou</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="namesti" style="padding-top:20px">
   <div class="wrap two">
     <div class="cup">
-      <svg viewBox="-100 -100 200 200" role="img" aria-label="Ilustrácia: šálka cappuccina na čipkovej podložke, pohľad zhora">
-        <ellipse cx="3" cy="6" rx="92" ry="92" fill="#000" opacity=".25" style="filter:blur(4px)"/>
-        <use href="#doily" x="-100" y="-100" width="200" height="200" style="--hole:var(--tray-d)"/>
-        <circle r="36" fill="#fff" stroke="var(--emb)"/><circle r="31" fill="none" stroke="var(--emb)" stroke-width=".8"/>
-        <rect x="18" y="-6" width="26" height="12" rx="6" fill="#fff" stroke="var(--emb)" transform="translate(14 0)"/>
-        <circle r="23" fill="#fff" stroke="var(--emb)"/>
-        <circle r="19" fill="#8a5a38"/>
-        <path d="M0 11 C-14 3 -13 -9 -6 -10 C-3 -10 -1 -8 0 -5 C1 -8 3 -10 6 -10 C13 -9 14 3 0 11Z" fill="#f3e3cb"/>
-        <path d="M-7 -5 C-5 -8 -2 -7 -1 -4" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
-      </svg>
+      <img src="assets/mgusto-zakusky-na-namesti.webp" width="720" height="900" loading="lazy" alt="Tri čokoládové zákusky v tvare košíka s čučoriedkami a jahodou na stole vonku, v pozadí námestie so stromami">
     </div>
     <div>
       <span class="lbl">Na námestí</span>
@@ -330,8 +352,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
 </section>
 
 <footer><div class="wrap">
-  <span>Neoficiálny návrh webu · webdavid.sk · 2026</span>
-  <span>Podklady: ich Facebook, Bolt Food, TripAdvisor, salkakavy.sk, Google (30. 9. – 1. 10. 2026)</span>
+  <span class="fl"><img src="assets/mgusto-logo.webp" width="44" height="44" loading="lazy" alt="Logo Mgusto cukráreň">Neoficiálny návrh webu · webdavid.sk · 2026</span>
+  <span>Podklady a fotky: ich Facebook, Bolt Food, TripAdvisor, salkakavy.sk, Google (30. 9. – 1. 10. 2026)</span>
 </div></footer>
 
 <nav class="bar" aria-label="Rýchle akcie">
